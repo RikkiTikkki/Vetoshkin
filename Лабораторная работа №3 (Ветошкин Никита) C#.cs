@@ -1,4 +1,4 @@
-﻿using System;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -19,7 +19,22 @@ namespace Пример_приложения_чтение_данных_из_xcel_
                 return;
             }
             Workbook excelBook = excelApp.Workbooks.Open(@"C:\Users\23_ИП-291к\Desktop\readExample.xlsx");
-            _Worksheet excelSheet = excelBook.Sheets[1];
+            bool not_error = false;
+            int list_nomber = 1;
+            while (!not_error) 
+            { 
+                Console.Write("Выберите страницу: ");
+                list_nomber = int.Parse(Console.ReadLine());
+                if (list_nomber == 0) 
+                {
+                    Console.WriteLine("Нулевого листа не существует");
+                }
+                else
+                {
+                    not_error = true;
+                }
+            }   
+            _Worksheet excelSheet = excelBook.Sheets[list_nomber];
             Range excelRange = excelSheet.UsedRange;
 
             int rows = excelRange.Rows.Count;
