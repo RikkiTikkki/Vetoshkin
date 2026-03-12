@@ -27,7 +27,7 @@ namespace ЛБ6
             potok1.Name = "Поток 1";
 
             Thread potok2 = new Thread(vivod2);
-            potok1.Name = "Поток 2";
+            potok2.Name = "Поток 2";
 
             Console.WriteLine($"Имя потока: {potok1.Name}");
             Console.WriteLine($"Статус потока: {potok1.ThreadState}");
@@ -94,4 +94,5 @@ namespace ЛБ6
         }
     }
 }
+
 
