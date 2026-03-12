@@ -1,4 +1,3 @@
-﻿using Microsoft.Office.Interop.Excel;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -7,7 +6,7 @@ using System.Runtime.InteropServices;
 using System.Text;
 using System.Threading;
 using System.Threading.Tasks;
-using static System.Net.Mime.MediaTypeNames;
+using Microsoft.Office.Interop.Excel;
 
 namespace ЛБ6
 {
@@ -95,3 +94,4 @@ namespace ЛБ6
         }
     }
 }
+
