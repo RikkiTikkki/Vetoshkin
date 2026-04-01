@@ -20,9 +20,9 @@ class Program
 
 
 
-        var mike = new Person { Name = "Макеев", Age = 18 };
+        var makeev = new Person { Name = "Макеев", Age = 18 };
         using var response1 = await
-        httpClient.PostAsJsonAsync("https://localhost:7017/api/users/",mike);
+        httpClient.PostAsJsonAsync("https://localhost:7017/api/users/",makeev);
         Person? person2 = await
         response1.Content.ReadFromJsonAsync<Person>();
         Console.WriteLine($"-Добавление нового пользователя:\n{person2?.Id} - {person2?.Name}");
