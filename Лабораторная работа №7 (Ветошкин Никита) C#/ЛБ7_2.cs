@@ -54,7 +54,7 @@ class Program
 
 
 
-        Console.WriteLine("Удаление пользователя:");
+        Console.WriteLine("-Удаление пользователя:");
         int id2 = 3;
         using var response3 = await
         httpClient.DeleteAsync($"https://localhost:7017/api/users/{id2}");
